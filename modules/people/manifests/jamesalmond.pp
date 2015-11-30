@@ -1,0 +1,53 @@
+class people::jamesalmond {
+
+  class { 'ruby::global':
+    version => '2.2.3'
+  }
+
+  ruby_gem { 'bundler for all rubies':
+    gem              => 'bundler',
+    version        => '~> 1.0',
+    ruby_version => '*',
+  }
+
+  include docker
+
+  include iterm2::stable
+  include iterm2::colors::solarized_dark
+  include zsh
+
+  include atom
+
+
+  include chrome
+  include firefox
+
+
+  include dropbox
+  include onepassword
+  include onepassword::chrome
+
+  include spotify
+  include adium
+  include flux
+  include licecap
+  include caffeine
+
+
+  # General settings
+  include osx::global::expand_print_dialog
+  include osx::global::disable_autocorrect
+  include osx::dock::disable_dashboard
+  include osx::finder::unhide_library
+  include osx::finder::show_all_filename_extensions
+  include osx::no_network_dsstores
+  class { 'osx::dock::position':
+    position => 'bottom'
+  }
+  class { 'osx::dock::icon_size':
+    size => 36
+  }
+  class { 'osx::dock::magnification':
+    magnification => false
+  }
+}
