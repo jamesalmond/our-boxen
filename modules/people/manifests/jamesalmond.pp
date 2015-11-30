@@ -6,13 +6,14 @@ class people::jamesalmond {
     ruby_version => '*',
   }
 
-  package { 'virtualbox':
+  package { 
+    [
+      'virtualbox',
+       'dockertoolbox'
+    ]:
     ensure   => present,
     provider => 'brewcask'
   }
-
-
-  include docker
 
   include iterm2::stable
   include iterm2::colors::solarized_dark

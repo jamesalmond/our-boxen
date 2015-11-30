@@ -53,7 +53,6 @@ github "sudo",        "1.0.0"
 
 github "module-data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 github "iterm2",      "1.2.5"
-github "docker",      "1.0.0"
 github "firefox",     "1.2.3"
 github "atom",        "1.3.0"
 github "dropbox",     "1.4.1"
