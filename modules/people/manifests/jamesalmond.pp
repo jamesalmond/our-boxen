@@ -41,6 +41,7 @@ class people::jamesalmond {
   include osx::finder::unhide_library
   include osx::finder::show_all_filename_extensions
   include osx::no_network_dsstores
+  include osx::safari::enable_developer_mode
   class { 'osx::dock::position':
     position => 'bottom'
   }
