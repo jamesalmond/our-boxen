@@ -43,7 +43,7 @@ class people::jamesalmond {
     position => 'bottom'
   }
   class { 'osx::dock::icon_size':
-    size => 24
+    size => 16
   }
   class { 'osx::dock::magnification':
     magnification => false
