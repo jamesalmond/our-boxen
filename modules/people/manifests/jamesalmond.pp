@@ -11,6 +11,14 @@ class people::jamesalmond {
       'virtualbox',
       'dockertoolbox',
       'dropbox'
+      'licecap',
+      'spotify',
+      'flux',
+      'adium',
+      'caffeine',
+      'firefox',
+      'google-chrome',
+      'atom'
     ]:
     ensure   => present,
     provider => 'brewcask'
@@ -20,24 +28,6 @@ class people::jamesalmond {
   include iterm2::colors::solarized_dark
   include zsh
   include ohmyzsh
-
-  include atom
-
-
-  include chrome
-  include firefox
-
-
-  include dropbox
-  include onepassword
-  include onepassword::chrome
-
-  include spotify
-  include adium
-  include flux
-  include licecap
-  include caffeine
-
 
   # General settings
   include osx::global::expand_print_dialog
