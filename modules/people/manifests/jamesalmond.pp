@@ -9,7 +9,8 @@ class people::jamesalmond {
   package { 
     [
       'virtualbox',
-       'dockertoolbox'
+      'dockertoolbox',
+      'dropbox'
     ]:
     ensure   => present,
     provider => 'brewcask'
