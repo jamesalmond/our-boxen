@@ -11,8 +11,6 @@ class people::jamesalmond {
     provider => 'brewcask'
   }
 
-  package { $cask_packages:
-                  }
 
   include docker
 
