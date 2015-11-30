@@ -11,8 +11,7 @@ class people::jamesalmond {
       'virtualbox'
     ]:
     ensure   => present,
-    provider => 'brewcask',
-    require  => Sudoers[$::boxen_user]
+    provider => 'brewcask'
   }
 
   package { $cask_packages:
