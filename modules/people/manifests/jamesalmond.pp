@@ -9,7 +9,7 @@ class people::jamesalmond {
   package {
     [
       'virtualbox'
-    ]
+    ]:
   }
 
   include docker
