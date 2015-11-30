@@ -66,5 +66,4 @@ github "flux",        "1.0.1"
 github "licecap",     "1.0.1"
 github "zsh",         "1.0.0"
 github "caffeine",    "1.0.0"
-github "virtualbox",  "1.0.13"
 

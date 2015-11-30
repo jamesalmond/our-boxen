@@ -6,7 +6,12 @@ class people::jamesalmond {
     ruby_version => '*',
   }
 
-  include virtualbox
+  package {
+    [
+      'virtualbox'
+    ]
+  }
+
   include docker
 
   include iterm2::stable
