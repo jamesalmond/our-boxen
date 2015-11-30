@@ -32,7 +32,6 @@ class people::jamesalmond {
   include flux
   include licecap
   include caffeine
-  include menumeters
 
 
   # General settings
