@@ -10,7 +10,7 @@ class people::jamesalmond {
     [
       'virtualbox',
       'dockertoolbox',
-      'dropbox'
+      'dropbox',
       'licecap',
       'spotify',
       'flux',
