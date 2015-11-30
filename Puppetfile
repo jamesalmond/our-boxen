@@ -49,6 +49,7 @@ github "pkgconfig",   "1.0.0"
 github "repository",  "2.4.1"
 github "ruby",        "8.5.3"
 github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
+github "sudo",        "1.0.0"
 
 github "module-data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 github "iterm2",      "1.2.5"
