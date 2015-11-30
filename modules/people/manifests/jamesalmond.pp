@@ -19,7 +19,8 @@ class people::jamesalmond {
       'firefox',
       'google-chrome',
       'atom',
-      '1password'
+      '1password',
+      'anki'
     ]:
     ensure   => present,
     provider => 'brewcask'
