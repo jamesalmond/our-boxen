@@ -6,10 +6,7 @@ class people::jamesalmond {
     ruby_version => '*',
   }
 
-  package {
-    [
-      'virtualbox'
-    ]:
+  package { 'virtualbox':
     ensure   => present,
     provider => 'brewcask'
   }
