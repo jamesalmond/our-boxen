@@ -10,7 +10,13 @@ class people::jamesalmond {
     [
       'virtualbox'
     ]:
+    ensure   => present,
+    provider => 'brewcask',
+    require  => Sudoers[$::boxen_user]
   }
+
+  package { $cask_packages:
+                  }
 
   include docker
 
