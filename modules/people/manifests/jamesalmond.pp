@@ -1,9 +1,5 @@
 class people::jamesalmond {
 
-  class { 'ruby::global':
-    version => '2.2.3'
-  }
-
   ruby_gem { 'bundler for all rubies':
     gem              => 'bundler',
     version        => '~> 1.0',
