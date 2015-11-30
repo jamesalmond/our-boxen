@@ -18,7 +18,8 @@ class people::jamesalmond {
       'caffeine',
       'firefox',
       'google-chrome',
-      'atom'
+      'atom',
+      '1password'
     ]:
     ensure   => present,
     provider => 'brewcask'
