@@ -65,4 +65,5 @@ github "flux",        "1.0.1"
 github "licecap",     "1.0.1"
 github "zsh",         "1.0.0"
 github "caffeine",    "1.0.0"
+github 'ohmyzsh',      "1.0.0", :repo => "erivello/puppet-ohmyzsh"
 
