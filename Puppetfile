@@ -65,4 +65,5 @@ github "flux",        "1.0.1"
 github "licecap",     "1.0.1"
 github "zsh",         "1.0.0"
 github "caffeine",    "1.0.0"
+github "menumeters",  "0.0.1", :repo => "adamcrews/puppet-menumeters"
 
