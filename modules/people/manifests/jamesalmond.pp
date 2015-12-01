@@ -1,5 +1,11 @@
 class people::jamesalmond {
 
+  class { 'ruby::global':
+    version => '2.2.3'
+  }
+
+  ruby::version { '2.1.1': }
+
   ruby_gem { 'bundler for all rubies':
     gem              => 'bundler',
     version        => '~> 1.0',
@@ -69,7 +75,6 @@ class people::jamesalmond {
   git::config::global { 'user.name':
     value => 'James Almond'
   }
-
   git::config::global { 'alias.co':
     value => 'checkout'
   }
