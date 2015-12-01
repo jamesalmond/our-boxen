@@ -62,9 +62,6 @@ node default {
   }
 
 
-  # default ruby versions
-  ruby::version { '2.2.3': }
-
   # common, useful packages
   package {
     [
