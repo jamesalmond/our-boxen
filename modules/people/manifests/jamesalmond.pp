@@ -6,6 +6,20 @@ class people::jamesalmond {
     ruby_version => '*',
   }
 
+  sudoers { 'installer':
+    users    => $::boxen_user,
+    hosts    => 'ALL',
+    commands => [
+      '(ALL) SETENV:NOPASSWD: /usr/sbin/installer',
+    ],
+    type     => 'user_spec',
+  }
+
+  package { 'virtualbox':
+       provider => 'brewcask',
+       require  => [ Homebrew::Tap['caskroom/cask'], Sudoers['installer'] ],
+  }
+
   package {
     [
       'virtualbox',
@@ -24,7 +38,8 @@ class people::jamesalmond {
       'macvim'
     ]:
     ensure   => present,
-    provider => 'brewcask'
+    provider => 'brewcask',
+    require  => [ Sudoers['installer'] ],
   }
 
   include iterm2::stable
