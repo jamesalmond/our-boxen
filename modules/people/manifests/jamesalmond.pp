@@ -20,7 +20,8 @@ class people::jamesalmond {
       'google-chrome',
       'atom',
       '1password',
-      'anki'
+      'anki',
+      'macvim'
     ]:
     ensure   => present,
     provider => 'brewcask'
@@ -30,7 +31,6 @@ class people::jamesalmond {
   include iterm2::colors::solarized_dark
   include zsh
   include ohmyzsh
-  include vim
 
 
   # General settings
