@@ -15,11 +15,6 @@ class people::jamesalmond {
     type     => 'user_spec',
   }
 
-  package { 'virtualbox':
-       provider => 'brewcask',
-       require  => [ Homebrew::Tap['caskroom/cask'], Sudoers['installer'] ],
-  }
-
   package {
     [
       'virtualbox',
@@ -46,6 +41,7 @@ class people::jamesalmond {
   include iterm2::colors::solarized_dark
   include zsh
   include ohmyzsh
+  include janus
 
 
   # General settings
