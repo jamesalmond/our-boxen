@@ -33,7 +33,6 @@ class people::jamesalmond {
       'caffeine',
       'firefox',
       'google-chrome',
-      'atom',
       '1password',
       'anki'
     ]:
@@ -42,11 +41,36 @@ class people::jamesalmond {
     require  => [ Sudoers['installer'] ],
   }
 
+  file { "/Users/${::boxen_user}/.vimrc.after":
+    ensure  => present,
+    content => template("people/jamesalmond/vimrcafter.erb")
+  }
+
   include iterm2::stable
   include iterm2::colors::solarized_dark
   include zsh
   include ohmyzsh
   include janus
+
+  file_line { 'boxen_zsh':
+    path   => "/Users/${::boxen_user}/.zshrc",
+    line => '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh'
+  }
+
+  file_line { 'zsh_theme':
+    match   => 'ZSH_THEME="robbyrussell"',
+    path    => "/Users/${::boxen_user}/.zshrc",
+    line    => 'ZSH_THEME="miloshadzic"'
+  }
+
+  file { "/Users/${::boxen_user}/.ssh/id_rsa":
+    ensure => file,
+    mode   => '0700',
+  }
+
+  file { "/Users/${::boxen_user}/.ssh/id_rsa.pub":
+    ensure => file
+  }
 
 
   # General settings

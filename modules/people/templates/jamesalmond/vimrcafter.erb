@@ -1,0 +1,20 @@
+set guioptions=aAce
+color molokai
+
+let mapleader = ","
+
+set nohlsearch             " don't highlight searches
+set visualbell             " shut the fuck up
+
+" ---------------------------------------------------------------------------
+"  Strip all trailing whitespace in file
+" ---------------------------------------------------------------------------
+
+function! StripWhitespace ()
+    exec ':%s/ \+$//gc'
+endfunction
+map ,s :call StripWhitespace ()<CR>
+
+command Md !mkdir -p %:h
+
+command HashSyntax :%s/:\([^ ]*\)\(\s*\)=>/\1:/g
