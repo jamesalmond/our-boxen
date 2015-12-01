@@ -30,6 +30,9 @@ class people::jamesalmond {
   include iterm2::colors::solarized_dark
   include zsh
   include ohmyzsh
+  include macvim
+  include janus
+
 
   # General settings
   include osx::global::expand_print_dialog
