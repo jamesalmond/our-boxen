@@ -48,4 +48,34 @@ class people::jamesalmond {
   class { 'osx::dock::magnification':
     magnification => false
   }
+
+  git::config::global { 'user.email':
+    value => 'james@jamesalmond.com'
+  }
+
+  git::config::global { 'user.name':
+    value => 'James Almond'
+  }
+
+  git::config::global { 'alias.co':
+    value => 'checkout'
+  }
+  git::config::global { 'alias.ci':
+    value => 'commit'
+  }
+  git::config::global { 'color.diff':
+    value => 'auto'
+  }
+  git::config::global { 'color.status':
+    value => 'auto'
+  }
+  git::config::global { 'color.branch':
+    value => 'auto'
+  }
+  git::config::global { 'color.ui':
+    value => 'true'
+  }
+  git::config::global { 'core.editor':
+    value => 'vim'
+  }
 }
