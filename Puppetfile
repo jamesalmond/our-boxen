@@ -56,6 +56,4 @@ github "iterm2",      "1.2.5"
 github "osx",         "2.8.0"
 github "zsh",         "1.0.0"
 github 'ohmyzsh',     "1.0.0", :repo => "erivello/puppet-ohmyzsh"
-github 'macvim',      "1.0.0"
-github 'janus',       "1.0.1", :repo => "paulcollinsiii/puppet-janus"
-
+github 'vim',         "1.0.5"

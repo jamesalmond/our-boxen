@@ -6,7 +6,7 @@ class people::jamesalmond {
     ruby_version => '*',
   }
 
-  package { 
+  package {
     [
       'virtualbox',
       'dockertoolbox',
@@ -30,8 +30,7 @@ class people::jamesalmond {
   include iterm2::colors::solarized_dark
   include zsh
   include ohmyzsh
-  include macvim
-  include janus
+  include vim
 
 
   # General settings
