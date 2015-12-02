@@ -41,10 +41,24 @@ class people::jamesalmond {
     require  => [ Sudoers['installer'] ],
   }
 
+  package {
+    [
+      'qt5',
+      'postgres'
+    ]:
+    ensure   => present
+  }
+
+  exec {'Force link qt':
+    command => 'brew link --force qt5',
+    require  => [ Package['qt5'] ]
+  }
+
   file { "/Users/${::boxen_user}/.vimrc.after":
     ensure  => present,
     content => template("people/jamesalmond/vimrcafter.erb")
   }
+
 
   include iterm2::stable
   include iterm2::colors::solarized_dark
@@ -52,9 +66,14 @@ class people::jamesalmond {
   include ohmyzsh
   include janus
 
+  file { "/Users/${::boxen_user}/.zshrc.after":
+    ensure  => present,
+    content => template("people/jamesalmond/zshrc.after.erb")
+  }
+
   file_line { 'boxen_zsh':
     path   => "/Users/${::boxen_user}/.zshrc",
-    line => '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh'
+    line => "[ -f /Users/${::boxen_user}/.zshrc.after ] && source /Users/${::boxen_user}/.zshrc.after"
   }
 
   file_line { 'zsh_theme':
